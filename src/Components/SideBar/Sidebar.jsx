@@ -28,13 +28,15 @@ const Sidebar = () => {
   return (
     <nav className="side-bar">
       <ul>
+        
         {/* Students Dropdown */}
+      <li> <h2 className="p-1">🎓 LMS</h2></li>
         <li>
           <button
             className="dropdown-btn"
             onClick={() => toggleDropdown("students")}
           >
-            Students {dropdownOpen.students ? "▲" : "▼"}
+            Students <span>{dropdownOpen.students ? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -56,7 +58,7 @@ const Sidebar = () => {
             className="dropdown-btn"
             onClick={() => toggleDropdown("teachers")}
           >
-            Teachers {dropdownOpen.teachers ? "▲" : "▼"}
+            Teachers <span>{dropdownOpen.teachers ? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -78,7 +80,7 @@ const Sidebar = () => {
             className="dropdown-btn"
             onClick={() => toggleDropdown("subjects")}
           >
-          Subjects {dropdownOpen.subjects ? "▲" : "▼"}
+          Subjects <span>{dropdownOpen.subjects ? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -99,7 +101,7 @@ const Sidebar = () => {
             className="dropdown-btn"
             onClick={() => toggleDropdown("syllabus")}
           >
-            Syllabus {dropdownOpen.syllabus ? "▲" : "▼"}
+            Syllabus <span>{dropdownOpen.syllabus ? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -120,7 +122,7 @@ const Sidebar = () => {
             className="dropdown-btn"
             onClick={() => toggleDropdown("school")}
           >
-            School {dropdownOpen.school ? "▲" : "▼"}
+            School <span>{dropdownOpen.school ? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -147,7 +149,7 @@ const Sidebar = () => {
             className="dropdown-btn"
             onClick={() => toggleDropdown("class")}
           >
-            Class{dropdownOpen.class? "▲" : "▼"}
+           Class  <span>{dropdownOpen.class? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -155,7 +157,7 @@ const Sidebar = () => {
             }`}
           >
             <li>
-              <Link to="/dashboard/class/add">Add Class</Link>
+              <Link to="/dashboard/class/add">Class Form</Link>
             </li>
             <li>
               <Link to="/dashboard/class/list">Class List</Link>
@@ -168,7 +170,7 @@ const Sidebar = () => {
             className="dropdown-btn"
             onClick={() => toggleDropdown("fees")}
           >
-            fees {dropdownOpen.fees ? "▲" : "▼"}
+            fees <span>{dropdownOpen.fees ? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -176,10 +178,10 @@ const Sidebar = () => {
             }`}
           >
             <li>
-              <Link to="/dashboard/fees/add">Add Fees</Link>
+              <Link to="/dashboard/fees/structure"> Fees Structure</Link>
             </li>
             <li>
-              <Link to="/dashboard/fees/list">Fees List</Link>
+              <Link to="/dashboard/fees/form">Fees Submission</Link>
             </li>
           </ul>
         </li>
@@ -189,7 +191,7 @@ const Sidebar = () => {
             className="dropdown-btn"
             onClick={() => toggleDropdown("admissions")}
           >
-            Admissions {dropdownOpen.admissions ? "▲" : "▼"}
+            Admissions <span>{dropdownOpen.admissions ? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -197,20 +199,18 @@ const Sidebar = () => {
             }`}
           >
             <li>
-              <Link to="/dashboard/admissions/add">Add  Admissions</Link>
+              <Link to="/dashboard/class/add"> Admission Form</Link>
             </li>
-            <li>
-              <Link to="/dashboard/admissions/list">Admissions List</Link>
-            </li>
+            
           </ul>
         </li>
 {/* Exam Dropdown */}
              <li>
           <button
             className="dropdown-btn"
-            onClick={() => toggleDropdown("exam")}
+            onClick={() => toggleDropdown("exams")}
           >
-            Exam {dropdownOpen.exams ? "▲" : "▼"}
+            Exam <span>{dropdownOpen.exams ? "▲" : "▼"}</span>
           </button>
           <ul
             className={`dropdown-menu ${
@@ -218,10 +218,10 @@ const Sidebar = () => {
             }`}
           >
             <li>
-              <Link to="/dashboard/exam/add">Add Exam</Link>
+              <Link to="/dashboard/exam/schedule">Exam Schedule</Link>
             </li>
             <li>
-              <Link to="/dashboard/exam/list">Exam List</Link>
+              <Link to="/dashboard/exam/result">Exam Result</Link>
             </li>
           </ul>
         </li>

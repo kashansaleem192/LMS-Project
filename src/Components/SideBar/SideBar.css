@@ -1,16 +1,18 @@
 .side-bar {
   width: 250px;
   background-color: #f0f0f0;
-  min-height: 100vh;
+  height: 100vh; /* min-height → height: 100vh */
   padding: 1rem;
   color: black;
   position: fixed;
   top: 0;
   left: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: auto;  /* vertical scroll */
+  overflow-x: hidden; /* hide horizontal scroll */
   box-sizing: border-box;
 }
+
+
 
 /* List reset */
 .side-bar ul {
@@ -106,4 +108,12 @@
 .side-bar::-webkit-scrollbar-thumb {
   background-color: #bbb;
   border-radius: 4px;
+}
+span{
+    font-size: 12px;
+    color: #1976d2;
+}
+
+.dropdown-btn:hover span {
+    color: white;
 }

@@ -10,6 +10,15 @@ import TeacherRegistration from "./Components/Teachers/TeacherRegistration"
 import TeacherList from "./Components/Teachers/TeachersList"
 import SubjectRegistration from "./Components/Subject/SubjectRegistration"
 import SubjectList from "./Components/Subject/SubjectList"
+import SyllabusRegistration from "./Components/Syllabus/Syllabus"
+import SyllabusList from "./Components/Syllabus/SyllabusList"
+import ClassRegistration from "./Components/Class/ClassForm"
+import ClassList from "./Components/Class/ClassList"
+import FeeStructureCards from "./Components/Fee/FeeStructure"
+import FeeStructureCardsColumn from "./Components/Fee/FeeStructure"
+import FeeSubmissionForm from "./Components/Fee/FeeSubmission"
+import ExamSchedule from "./Components/Exam/ExamSchedule"
+import ExamResult from "./Components/Exam/ExamResult"
 
 function App() {
   return (
@@ -69,7 +78,7 @@ function App() {
 />
 
 
-     {/* Teachers Registration inside Dashboard */}
+     {/*Subject Registration inside Dashboard */}
         <Route
         path="/dashboard/subject/add"
         element={
@@ -79,7 +88,7 @@ function App() {
         }
         
       />
-        {/* Teachers List inside Dashboard */}
+        {/* Subject List inside Dashboard */}
       <Route
   path="/dashboard/subject/list"
   element={
@@ -88,6 +97,83 @@ function App() {
     </DashBoard>
   }
 />
+
+
+     {/*SYllabus Registration inside Dashboard */}
+        <Route
+        path="/dashboard/syllabus/add"
+        element={
+          <DashBoard>
+         <SyllabusRegistration/>
+          </DashBoard>
+        }
+        
+      />
+        {/* Syllabus List inside Dashboard */}
+      <Route
+  path="/dashboard/syllabus/list"
+  element={
+    <DashBoard>
+ <SyllabusList/>
+    </DashBoard>
+  }
+/>
+
+      <Route
+        path="/dashboard/class/add"
+        element={
+          <DashBoard>
+         <ClassRegistration/>
+          </DashBoard>
+        }
+        
+      />
+
+      <Route
+        path="/dashboard/class/list"
+        element={
+          <DashBoard>
+         <ClassList/>
+          </DashBoard>
+        }
+        
+      />
+           <Route
+        path="/dashboard/fees/structure"
+        element={
+          <DashBoard>
+         <FeeStructureCardsColumn/>
+          </DashBoard>
+        }
+        
+      />
+            <Route
+        path="/dashboard/fees/form"
+        element={
+          <DashBoard>
+         <FeeSubmissionForm/>
+          </DashBoard>
+        }
+        
+      />
+             <Route
+        path="/dashboard/exam/schedule"
+        element={
+          <DashBoard>
+        <ExamSchedule/>
+          </DashBoard>
+        }
+        
+      />
+            <Route
+        path="/dashboard/exam/result"
+        element={
+          <DashBoard>
+         <ExamResult/>
+          </DashBoard>
+        }
+        
+      />
 
     </Routes>
   )

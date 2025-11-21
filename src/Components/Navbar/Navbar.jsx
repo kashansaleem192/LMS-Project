@@ -16,8 +16,8 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from "../../Firebase";
 import { signOut } from "firebase/auth";
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [];
+const settings = ['Logout'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -70,7 +70,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Learning Management System
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -100,9 +100,9 @@ function Navbar() {
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+              {pages.map(() => (
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: 'center' }}>{}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -125,7 +125,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
