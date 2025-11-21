@@ -1,0 +1,3 @@
+- [x] Add a route for path="/" element={<Home/>} in App.jsx
+- [x] Remove the <Home/> component outside the <Routes> in App.jsx
+- [x] Clean up unused imports (useState, reactLogo, viteLogo, count, setCount) in App.jsx

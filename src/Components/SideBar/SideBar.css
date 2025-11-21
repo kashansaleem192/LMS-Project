@@ -1,0 +1,109 @@
+.side-bar {
+  width: 250px;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  padding: 1rem;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* List reset */
+.side-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-bar li {
+  position: relative; /* Important for dropdown positioning */
+  margin: 0.5rem 0;
+}
+
+/* Normal links */
+.side-bar a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0.25rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.side-bar a:hover {
+  background-color: #ddd;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.25rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.dropdown-btn:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* Dropdown menu - open downward */
+.dropdown-menu {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  display: block; /* make sure it's visible */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  position: relative; /* ensures dropdown below parent */
+}
+
+.dropdown-menu.open {
+  max-height: 500px; /* enough to show items */
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  margin: 0.25rem 0;
+  
+}
+
+.dropdown-menu a {
+  color: #333;
+  font-size: 0.95rem;
+  padding-left: 0.5rem;
+  display: block;
+  border-radius: 4px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* Scrollbar */
+.side-bar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-bar::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.side-bar::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}

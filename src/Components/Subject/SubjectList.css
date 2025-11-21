@@ -1,0 +1,77 @@
+.subject-list-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 20px;
+  padding-right: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow-y: scroll;
+}
+
+.subject-list-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Table Base */
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Table Header */
+.subject-table thead {
+  background-color: #1976d2;
+  color: white;
+}
+
+.subject-table th {
+  padding: 14px 10px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Table Rows */
+.subject-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Hover Effect */
+.subject-table tbody tr:hover {
+  background-color: #f1f7ff;
+  transition: 0.2s ease-in-out;
+}
+
+/* No Data */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: grey;
+  font-size: 18px;
+}
+.add-btn{
+     background-color: #1976d2;
+     color: white;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .subject-table th,
+  .subject-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .subject-list-container {
+    padding: 15px;
+  }
+}
